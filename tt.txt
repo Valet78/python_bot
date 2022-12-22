@@ -1,1 +1,2 @@
-wefw
+Ссылки:
+Этот репозиторий https://github.com/Valet78/python_bot.git
