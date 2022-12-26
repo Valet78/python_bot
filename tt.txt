@@ -1,2 +1,8 @@
 Ссылки:
 Этот репозиторий https://github.com/Valet78/python_bot.git
+https://pythonru.com/primery/python-telegram-bot
+
+https://www.cyberforum.ru/python-api/thread2938908.html курсы валют
+https://cbr.ru/development/SXML/
+
+https://pytba.readthedocs.io/en/latest/types.html#telebot.types.Venue
