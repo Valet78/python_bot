@@ -25,7 +25,8 @@ def send_welcome(message):
         case '/game_117':             
             game_117(message)    
         case '/kurs':
-            bot.register_next_step_handler(message,kurs_topic)
+            send_bot(message, load_exchange())
+            # bot.register_next_step_handler(message,kurs_topic)
                  
         
 
