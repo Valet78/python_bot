@@ -1,12 +1,6 @@
 from login.act import *     # Token bot
-from game import send_bot, game_117
+from game import game_117
 from kursi import *
-
-def kurs_topic():
-    
-
-    ff=90
-
 
 
 @bot.message_handler(commands=['start', 'help', 'game_117', 'kurs'])
@@ -25,15 +19,12 @@ def send_welcome(message):
         case '/game_117':             
             game_117(message)    
         case '/kurs':
-            send_bot(message, load_exchange())
+            exchange_command(message)  
+            
             # bot.register_next_step_handler(message,kurs_topic)
                  
-        
-
-@bot.message_handler(func=lambda m: True)
-def echo_all(message):
-    # send_bot = lambda x: bot.send_message(message.chat.id, x)
-    
+@bot.message_handler(func=lambda m: True)           # Обработка любых сообщений
+def send_back(message):
     send_bot(message,'Для ознакомления с функциями бота наберите /help')
 
 

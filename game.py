@@ -4,6 +4,7 @@ from datetime import datetime as dt
 from os import getcwd, path
 from csv import *
 
+
 current_gamer, all_candy, one_candy, two_candy = 0, 0, 0, 0
 
 
@@ -34,7 +35,10 @@ def start_game(message):
     else:  
         send_bot(message, "Ну, и ладно!!!")
     
-
+# Отправка сообщений в чат
+def send_bot(message, in_text:str):    
+    id_chat = message.chat.id
+    bot.send_message(id_chat, in_text)
 
 # Основной блок игры
 def run_game(message):
@@ -85,11 +89,6 @@ def step_gamer(message):
             В куче {all_candy} конфет(ы). Сколько заберёте Вы?')
         bot.register_next_step_handler(message, step_gamer)
     
-
-# Отправка сообщений в чат
-def send_bot(message, in_text:str):    
-    id_chat = message.chat.id
-    bot.send_message(id_chat, in_text)
 
 # Запись событий в файл
 def log_win(strMassage: str, strTime: str):
